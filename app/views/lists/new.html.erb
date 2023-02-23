@@ -1,0 +1,14 @@
+<h1> New List </h1>
+
+<%= simple_form_for(@list) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+  </div>
+
+  <div class="btn btn-secondary">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to "Return to all lists", lists_path, class: "btn btn-primary" %>
