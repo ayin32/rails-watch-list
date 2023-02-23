@@ -21,3 +21,5 @@
 <%= link_to "Create a new bookmark", new_list_bookmark_path(@list), class: "btn btn-primary"  %>
 
 <%= link_to "Return to all lists", lists_path, class: "btn btn-primary"  %>
+
+<%= link_to "Delete list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Delete list?"}, class: "btn btn-danger"  %>
