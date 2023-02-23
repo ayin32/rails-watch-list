@@ -1,6 +1,8 @@
 <div class='text-center p-20'>
 <h1> <%= @list.name %> </h1>
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fit %>
+<% if @list.photo.present? %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fit %>
+<% end %>
 </div>
 
 <% @list.bookmarks.each do |bookmark| %>
